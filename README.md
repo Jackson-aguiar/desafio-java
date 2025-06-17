@@ -14,15 +14,23 @@ Este projeto utiliza o framework quarkus, para inicia-lo utilize o comando:
 ## ENDPOINTS
 
 Criar Pauta:
-> **POST**   /pauta/criar 
+> **POST**   /pauta/criar
+> {
+>   "nome": String,
+>   "descricao": String
+> }
 
 Pauta Iniciar Votação:
-> **POST**   /pauta/{idPauta}/abrir-votacao 
+> **POST**   /pauta/{idPauta}/abrir-votacao?minutos=
 
 Resultado da Votação da Pauta:
 > **GET**   /pauta/{idPauta}/resultado 
 
 Votar na Pauta:
-> **POST**  /usuario/votar/pauta/{{idPauta}} 
+> **POST**  /usuario/votar/pauta/{{idPauta}}
+> {
+    "idUsuario": Long,
+    "voto": String ("SIM", "NAO")
+}
 
 
