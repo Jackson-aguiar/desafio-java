@@ -15,6 +15,7 @@ Este projeto utiliza o framework quarkus, para inicia-lo utilize o comando:
 
 Criar Pauta:
 > **POST**   /pauta/criar
+> 
 > {
 >   "nome": String,
 >   "descricao": String
@@ -28,6 +29,7 @@ Resultado da Votação da Pauta:
 
 Votar na Pauta:
 > **POST**  /usuario/votar/pauta/{{idPauta}}
+> 
 > {
     "idUsuario": Long,
     "voto": String ("SIM", "NAO")
